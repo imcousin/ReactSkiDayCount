@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SkiDaysList from './Components/SkiDaysList'
-import {SkiDaysCount} from './Components/SkiDaysCount'
-import {AddDayForm} from './Components/AddDayForm'
+import SkiDaysList from './Components/SkiDaysList';
+import { SkiDaysCount } from './Components/SkiDaysCount';
+import { AddDayForm } from './Components/AddDayForm'
+import { Menu } from './Components/Menu';
 
 class App extends Component {
   constructor(){
@@ -45,6 +46,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <Menu />
         {(this.props.location.pathname === "/") ? 
                       <SkiDaysCount total={this.countDays()}
                       powder={this.countDays("powder")}
